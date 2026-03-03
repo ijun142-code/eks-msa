@@ -29,7 +29,7 @@ spring:
       routes:
 
         # 1. MEMBER direct 방식
-        # 외부: https://server.aws-esk.com/member/doLogin
+        # 외부: https://server.aws8way.click/member/doLogin
         # 경로를 그대로 유지한 채 member-service로 전달
         # 예: /member/doLogin   -->  member-service의 /member/doLogin 실행
         - id: member-direct
@@ -51,7 +51,7 @@ spring:
 
 
         # 4. MEMBER prefix 방식 (기존 방식 유지)
-        # 외부: https://server.aws-esk.com/member-service/...
+        # 외부: https://server.8way.click/member-service/...
         # 앞의 /member-service 제거 후 member-service로 전달
         # 예: /member-service/member/doLogin → /member/doLogin
         - id: member-service

@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: monitoring-8way-click-tls
+  namespace: monitoring
+spec:
+  secretName: monitoring-8way-click-tls
+  duration: 2160h  		# 90d
+  renewBefore: 360h  	# 15d
+  issuerRef:
+    name: my-issuer
+    kind: ClusterIssuer
+  dnsNames:
+  - prometheus.8way.click
+  - grafana.8way.click
